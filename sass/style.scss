@@ -12,3 +12,9 @@
 .carrousel--ouvrir{
     transform: scale(1);
 }
+
+.carrousel__figure .img {
+    object-fit: cover;
+    width: 50%;
+    height: 50%;
+}

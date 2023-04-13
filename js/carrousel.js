@@ -1,3 +1,5 @@
+////base des fonctions du carrousel
+
 (function(){
     console.log('début du carrousel')
     let boutcarrousel__ouvrir = document.querySelector('.carrousel__ouvrir');

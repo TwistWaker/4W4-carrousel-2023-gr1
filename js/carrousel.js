@@ -15,7 +15,7 @@
     let galerie__img = document.querySelectorAll("img");
     console.log(galerie__img.length);
     let index = 0;
-    let ancien_index = 1;
+    let ancien_index = -1;
     let position = 0; // permet indexer les images de la galerie et 
     /************************************************* */
     boutcarrousel__ouvrir.addEventListener('mousedown', function(){
@@ -34,8 +34,9 @@
         function ajout_img_dans_carrousel(){
             
             for(const elm of galerie__img){
+                elm.dataset.index = position;
                 elm.addEventListener('mousedown',function(){
-                    elm.dataset.index = position;
+        
                     index = this.dataset.index;
                     afficher_image(index);
                     //console.log(index)
@@ -76,9 +77,20 @@
 
         function afficher_image(index){
             
-            if(ancien_index !=1){
-            carrousel__figure.children[ancien_index].style.opacity = 0;}
-           carrousel__figure.children[index].style.opacity =1;
-           ancien_index = index;
-        }
+            if (ancien_index != -1){
+                // carrousel__figure.children[ancien_index].style.opacity = 0  
+                carrousel__figure.children[ancien_index].classList.remove('carrousel__img--activer')
+               // carrousel__form.children[ancien_index].checked = false;
+               }
+               // carrousel__figure.children[index].style.opacity = 1
+               carrousel__figure.children[index].classList.add('carrousel__img--activer')
+               ancien_index = index
+             }
+
+             /* permet de verifier si la classe <<carrousl-activer>> ce trouve dans
+             la liste des classes carrousel
+             carrousel.classlist.contain('carrousel--activer')
+             
+             */
+        
 })()

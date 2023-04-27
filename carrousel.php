@@ -40,6 +40,8 @@ function genere_boite()
     return '   <button class="carrousel__ouvrir"> ouvrir carrousel</button>
                 <div class="carrousel">
                 <button class="carrousel__x">X</button>
+                <button class="carrousel__fleche_gauche"><-</button>
+                <button class="carrousel__fleche_droite">-></button>
                 <figure class="carrousel__figure"></figure>
                 <form class="carrousel__form"></form>
             </div>';

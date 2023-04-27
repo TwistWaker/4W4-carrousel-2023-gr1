@@ -48,3 +48,21 @@
   display: inline-block;
   margin: 5px;
 }
+
+.carrousel__fleche_droite {
+  color: chartreuse;
+  background-color: purple;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  z-index: 3;
+}
+
+.carrousel__fleche_gauche {
+  color: chartreuse;
+  background-color: purple;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 3;
+}

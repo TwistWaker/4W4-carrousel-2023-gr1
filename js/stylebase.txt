@@ -13,15 +13,17 @@
   transform: scale(1);
 }
 
-.carrousel__figure{
+.carrousel__figure {
   overflow: hidden;
 }
-.carrousel__x{
+
+.carrousel__x {
   position: absolute;
   top: 0%;
   right: 0%;
   z-index: 3;
 }
+
 .carrousel__img {
   position: absolute;
   object-fit: cover;
@@ -30,18 +32,37 @@
   opacity: 0;
   transition: opacity 0.5s;
 }
-.carrousel__img--activer{
+
+.carrousel__img--activer {
   opacity: 1;
 }
-.carrousel__form{
+
+.carrousel__form {
   position: absolute;
   bottom: 0%;
   text-align: center;
   width: 100%;
 }
 
-.carrousel__rad{
+.carrousel__rad {
   display: inline-block;
-
   margin: 5px;
+}
+
+.carrousel__fleche_droite {
+  color: chartreuse;
+  background-color: purple;
+  position: absolute;
+  top: 50%;
+  right: 0%;
+  z-index: 3;
+}
+
+.carrousel__fleche_gauche {
+  color: chartreuse;
+  background-color: purple;
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  z-index: 3;
 }

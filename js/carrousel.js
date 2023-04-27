@@ -37,9 +37,9 @@
 
       index = index -1;
       afficher_image(index);
-    /*  if(index < 0){
-        index = 6;
-      }*/
+      if(index <= 0){
+        index = 5;
+      }
         
         })
 
@@ -47,6 +47,9 @@
 
         index = index +1;
       afficher_image(index);
+      if(index >5){
+        index = 0;
+      }
         
         })
 

@@ -31,6 +31,23 @@
         
         })
 
+    boutcarrousel__fleche_gauche.addEventListener('mousedown', function(){
+
+      index = index -1;
+      afficher_image(index);
+    /*  if(index < 0){
+        index = 6;
+      }*/
+        
+        })
+
+    boutcarrousel__fleche_droite.addEventListener('mousedown', function(){
+
+        index = index +1;
+      afficher_image(index);
+        
+        })
+
         function ajout_img_dans_carrousel(){
             
             for(const elm of galerie__img){

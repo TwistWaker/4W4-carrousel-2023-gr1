@@ -6,6 +6,8 @@
     let boutcarrousel__ouvrir = document.querySelector('.carrousel__ouvrir');
     let boutcarrousel =document.querySelector('.carrousel');
     let boutcarrousel__x = document.querySelector('.carrousel__x');
+    let boutcarrousel__fleche_droite = document.querySelector('.carrousel__fleche_droite');
+    let boutcarrousel__fleche_gauche = document.querySelector('.carrousel__fleche_gauche');
     let carrousel__figure = document.querySelector('.carrousel__figure');
     console.log(carrousel__figure.tagName);
     let carrousel__form = document.querySelector('.carrousel__form');
@@ -22,7 +24,7 @@
 
     boutcarrousel.classList.add('carrousel--ouvrir');
     ajout_img_dans_carrousel();
-    
+    console.log(index);
     })
     /****************************************************** */
     boutcarrousel__x.addEventListener('mousedown', function(){

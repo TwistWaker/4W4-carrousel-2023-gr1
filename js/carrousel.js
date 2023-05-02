@@ -19,11 +19,13 @@
     let index = 0;
     let ancien_index = -1;
     let position = 0; // permet indexer les images de la galerie et 
+    ajout_img_dans_carrousel();
     /************************************************* */
     boutcarrousel__ouvrir.addEventListener('mousedown', function(){
 
     boutcarrousel.classList.add('carrousel--ouvrir');
-    ajout_img_dans_carrousel();
+    
+    afficher_image(index);
     console.log(index);
     })
     /****************************************************** */
@@ -38,7 +40,7 @@
       index = index -1;
       afficher_image(index);
       if(index <= 0){
-        index = 6;
+        index = galerie__img.length;
       }
         
         })
@@ -47,7 +49,7 @@
 
         index = index +1;
       afficher_image(index);
-      if(index >5){
+      if(index >= 5){
         index = 0;
       }
         
@@ -58,7 +60,7 @@
             for(const elm of galerie__img){
                 elm.dataset.index = position;
                 elm.addEventListener('mousedown',function(){
-        
+                  boutcarrousel.classList.add('carrousel--ouvrir');
                     index = this.dataset.index;
                     afficher_image(index);
                     //console.log(index)

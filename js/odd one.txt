@@ -84,7 +84,9 @@
         function creation_img_carrousel(elm){
             console.log(elm.getAttribute('src'));
             let img = document.createElement('img');
-            img.src = elm.src;
+             let longeur = elm.src.length-12;
+           //  let extension = elm.src.substr(0, -4);
+            img.src = elm.src.substr(0, longeur) + ".jpg";
             img.classList.add('carrousel__img');
             //img.setAttribute('src', elm.getAttribute('src'));
            carrousel__figure.appendChild(img);
